@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+div {
+  width: 670px;
+  height: 960px;
+  left: 625px;
+  top: 60px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+
+  background: #ffffff;
+  border: 1px solid #aacdff;
+  box-shadow: 7px 7px 39px rgba(0, 104, 255, 0.25);
+  border-radius: 20px;
+}
+h1 {
+  width: 466px;
+  height: 94px;
+  left: 725px;
+  top: 132px;
+
+  font-family: "Noto Sans CJK KR";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 47px;
+
+  color: #0068ff;
+}
+.id,
+.pw {
+  width: 466px;
+  height: 35px;
+  left: 725px;
+  top: 366px;
+  border: 1px solid #0068ff;
+}
+.gd {
+  width: 20px;
+  height: 19.95px;
+  left: 890px;
+  top: 721px;
+
+  background: #ebebeb;
+  border: 1px solid #d2d2d2;
+}
+.cb {
+  width: 20px;
+  height: 20px;
+  left: 737px;
+  top: 792.94px;
+
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 3px;
+}
+hr {
+  width: 470px;
+  height: 1px;
+  left: 725px;
+  top: 844px;
+
+  background: #e6e6e6;
+}
+button {
+  width: 470px;
+  height: 75px;
+  left: 725px;
+  top: 875px;
+
+  background: #ffffff;
+  border: 1px solid #0068ff;
+  border-radius: 10px;
+}

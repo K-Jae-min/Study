@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>회원가입</title>
+    <link href="./final.css" rel="stylesheet" />
+    <script src="./final.js"></script>
+  </head>
+  <body>
+    <div class="signupBackground">
+      <h1>코드캠프 회원가입</h1>
+      <input type="text" id="email" class="signupif" placeholder="이메일을 입력해주세요." />
+      <input type="text" id="name" class="signupif" placeholder="이름을 입력해 주세요." />
+      <input type="text" id="pw1" class="signupif" placeholder="비밀번호를 입력해 주세요." />
+      <input type="text" id="pw2" class="signupif" placeholder="비밀번호를 다시 입력해 주세요." />
+      <div class="signupPh">
+        <input type="text" id="p1" class="pn" oninput="changeFocus1(); checkValidation();" maxlength="3" />-
+        <input type="text" id="p2" class="pn" oninput="changeFocus2(); checkValidation();" maxlength="4" />-
+        <input type="text" id="p3" class="pn" maxlength="4" oninput="checkValidation()" />
+      </div>
+      <div class="trlo">
+        <div id="target" class="tg">000000</div>
+        <button id="submit" class="tgbt" onclick="auth()" disabled="true">인증번호 전송</button>
+      </div>
+      <div class="tmlo">
+        <div id="timer" class="tm">3:00</div>
+        <button id="finish" class="tmbt" onclick="finishBtn()">인증완료</button>
+      </div>
+      <div>
+        <select class="location" id="location">
+          <option disabled selected>지역을 선택하세요.</option>
+          <option>서울</option>
+          <option>경기</option>
+          <option>인천</option>
+        </select>
+      </div>
+      <div class="gdlo"><input class="gd" type="radio" name="gneder" />여성 <input class="gd" type="radio" name="gneder" />남성</div>
+      <div class="divideLine"></div>
+      <button id="signBt" class="sb" onclick="signupValidation()">가입하기</button>
+    </div>
+  </body>
+</html>

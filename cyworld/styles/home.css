@@ -60,9 +60,9 @@ body {
   flex-direction: column;
 }
 
-.maincontents__body {
+.video {
   width: 100%;
   height: 240px;
-  margin-top: 5px;
-  background-color: lightgray;
+  margin-top: 7px;
+  background-color: #c4c4c4;
 }

@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.signupBackground {
+  width: 540px;
+  height: 960px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #aacdff;
+  box-shadow: 7px 7px 39px rgba(0, 104, 255, 0.25);
+  border-radius: 20px;
+  padding: 70px;
+}
+
+h1 {
+  width: 380px;
+  font-weight: 700;
+  font-size: 32px;
+  color: #0068ff;
+  text-align: left;
+}
+
+.signupif {
+  width: 380px;
+  height: 60px;
+  background: #ffffff;
+  border: 1px solid #0068ff;
+  border-radius: 7px;
+  padding: 0px 15px;
+}
+
+.pw {
+  font-weight: 400;
+  font-size: 16px;
+  color: #797979;
+}
+
+.signupPh {
+  width: 380px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px;
+}
+
+.pn {
+  width: 100px;
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid #d2d2d2;
+  border-radius: 7px;
+}
+
+.trlo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.tg {
+  width: 60px;
+  height: 27px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #0068ff;
+  margin-left: auto;
+}
+
+.tgbt {
+  width: 120px;
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid #d2d2d2;
+  border-radius: 7px;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: #0068ff;
+  margin-left: 20px;
+}
+
+.tmlo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.tm {
+  width: 35px;
+  height: 27px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #0068ff;
+  margin-left: auto;
+  border: none;
+}
+
+.tmbt {
+  background: #0068ff;
+  border-radius: 7px;
+  width: 120px;
+  height: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: #ffffff;
+  margin-left: 20px;
+}
+
+.location {
+  width: 380px;
+  height: 60px;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #d2d2d2;
+  border-radius: 7px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #797979;
+}
+
+.gdlo {
+  width: 380px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.gd {
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0px 15px;
+}
+
+.divideLine {
+  width: 380px;
+  border-top: 1px solid #e6e6e6;
+}
+
+.sb {
+  width: 380px;
+  height: 75px;
+  background: #ffffff;
+  border: 1px solid #0068ff;
+  border-radius: 10px;
+}

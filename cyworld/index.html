@@ -4,6 +4,7 @@
     <title>김재민님의 미니홈피 :: 사이좋은 사람들, 싸이월드</title>
     <link href="./styles/index.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/ad2745f256.js" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
   </head>
   <body>
     <div class="background">
@@ -53,8 +54,13 @@
                 </div>
             </div>
               <div class="wrapper__right__body">
-                <iframe src="./home.html"></iframe>
+                <iframe id="contentFrame" src="./home.html"></iframe>
               </div>
+            </div>
+            <div class="navigation">
+              <div class="navgation__item" id="menuHome" onclick="menuHome()">홈</div>
+              <div class="navgation__item" id="menuJukebox" onclick="menuJukebox()">쥬크박스</div>
+              <div class="navgation__item" id="menuGame" onclick="menuGame()">게임</div>
             </div>
           </div>
         </div>

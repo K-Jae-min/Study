@@ -16,10 +16,9 @@ const dateFormMaker = function () {
   return dateFormat;
 };
 
-const counterMaker = function () {
-  const targetDateInput = dateFormMaker();
+const counterMaker = function (data) {
   const nowDate = new Date();
-  const targetDate = new Date(targetDateInput).setHours(0, 0, 0, 0);
+  const targetDate = new Date(data).setHours(0, 0, 0, 0);
   const remaining = (targetDate - nowDate) / 1000;
   // 만약, remaining이 0이라면, 타이머가 종료 되었습니다. 출력
   if (remaining <= 0) {
@@ -48,9 +47,18 @@ const counterMaker = function () {
   const timeKeys = Object.keys(remainingObj);
   // remainingObj 키 배열
 
+  const format = function (time) {
+    if (time < 10) {
+      return "0" + time;
+    } else {
+      return time;
+    }
+  };
+
   let i = 0;
   for (let tag of documentarr) {
-    document.getElementById(tag).textContent = remainingObj[timeKeys[i]];
+    const remainingTime = format(remainingObj[timeKeys[i]]);
+    document.getElementById(tag).textContent = remainingTime;
     i++;
   }
 
@@ -71,19 +79,26 @@ const counterMaker = function () {
 };
 
 const starter = function () {
+  const targetDateInput = dateFormMaker();
   container.style.display = "flex";
   messagecontainer.style.display = "none";
-  counterMaker();
-  const interbalId = setInterval(counterMaker, 1000);
+  setClearInterval();
+  counterMaker(targetDateInput);
+  const interbalId = setInterval(() => {
+    counterMaker(targetDateInput);
+  }, 1000);
   interbalIdArr.push(interbalId);
 };
 
 const setClearInterval = function () {
-  container.style.display = "none";
-  messagecontainer.style.display = "flex";
-  messagecontainer.innerHTML = "<h3>D-day를 입력해주세요.</h3>";
-
   for (let i = 0; i < interbalIdArr.length; i++) {
     clearInterval(interbalIdArr[i]);
   }
+};
+
+const resetTimer = function () {
+  container.style.display = "none";
+  messagecontainer.style.display = "flex";
+  messagecontainer.innerHTML = "<h3>D-day를 입력해주세요.</h3>";
+  setClearInterval();
 };

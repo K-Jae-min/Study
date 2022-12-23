@@ -61,7 +61,7 @@ const counterMaker = function (data) {
     i++;
   }
 
-  //위코드 리팩터링
+  // for of 이용 리팩터링
   // const documentObj = {
   //   days: document.getElementById("days"),
   //   hours: document.getElementById("hours"),

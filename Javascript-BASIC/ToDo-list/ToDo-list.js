@@ -4,6 +4,8 @@ const todoList = document.querySelector("#todo-list");
 
 const savedTodoList = JSON.parse(localStorage.getItem("saved-items"));
 
+const savedWeatherData = JSON.parse(localStorage.getItem("saved-weather"));
+
 const createTodo = function (storageData) {
   let todoContents = todoInput.value;
   if (storageData) {
@@ -81,8 +83,13 @@ const weatherDataActive = function ({ location, weather }) {
   const weatherMainList = ["Clear", "Clouds", "Drizzle", "Rain", "Snow", "Thunderstorm"];
   weather = weatherMainList.includes(weather) ? weather : "Fog";
   const locationNameTag = document.querySelector("#location-name-tag");
+
   locationNameTag.textContent = location;
   document.body.style.backgroundImage = `url("./img/${weather}.jpg")`;
+
+  if (!savedWeatherData || savedWeatherData.location !== location || savedWeatherData.weather !== weather) {
+    localStorage.setItem("saved-weather", JSON.stringify({ location, weather }));
+  }
 };
 
 const weatherSearch = function ({ latitude, longitude }) {
@@ -118,6 +125,10 @@ const aksForLocation = function () {
   });
 };
 aksForLocation();
+
+if (savedWeatherData) {
+  weatherDataActive(savedWeatherData);
+}
 
 // const promiseTest = function () {
 //   return new Promise((resolver, reject) => {

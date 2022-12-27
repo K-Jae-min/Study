@@ -37,7 +37,7 @@ const createTodo = function (storageData) {
 };
 
 const keyCodeCheck = function () {
-  if (window.event.keyCode === 13 && todoInput.value) {
+  if (window.event.keyCode === 13 && todoInput.value.trim()) {
     createTodo();
   }
 };
@@ -77,8 +77,8 @@ if (savedTodoList) {
   }
 }
 
-const weatherSearch = function (position) {
-  fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${position.Latitude}&lon=${position.Longitude}&appid=455acb54dbfcf0293a47d280f22635e9`)
+const weatherSearch = function ({ latitude, longitude }) {
+  fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=455acb54dbfcf0293a47d280f22635e9`)
     .then((res) => {
       return res.json();
     })
@@ -90,10 +90,12 @@ const weatherSearch = function (position) {
     });
 };
 
-const accessToGeo = function (position) {
+const accessToGeo = function ({ coords }) {
+  const { latitude, longitude } = coords;
+  // shorthan property
   const positionObj = {
-    Latitude: position.coords.Latitude,
-    Longitude: position.coords.Longitude,
+    latitude,
+    longitude,
   };
   weatherSearch(positionObj);
 };

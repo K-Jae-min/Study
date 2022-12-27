@@ -93,7 +93,7 @@ const weatherDataActive = function ({ location, weather }) {
 };
 
 const weatherSearch = function ({ latitude, longitude }) {
-  fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=455acb54dbfcf0293a47d280f22635e9`)
+  fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=API`)
     .then((res) => {
       return res.json();
     })

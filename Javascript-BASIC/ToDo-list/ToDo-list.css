@@ -2,15 +2,25 @@
   box-sizing: border-box;
 }
 
-html,
 body {
   margin: 0;
   padding: 0;
-  background: azure;
+  background-image: url(./img/Clear.jpg);
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+}
+
+h1 {
+  color: white;
+  text-shadow: 2px 2px gray;
+  opacity: 80%;
+}
+
+input {
+  opacity: 60%;
 }
 
 .todo-container {
@@ -19,7 +29,7 @@ body {
 }
 
 #todo-input {
-  background: lightyellow;
+  background: lightgray;
   border: none;
   display: block;
   font-size: 2rem;
@@ -61,12 +71,20 @@ li button:active {
 
 .delete-btn-wrapper {
   margin-top: 1rem;
-  background: red;
 }
 
 .delete-btn-wrapper button {
+  border: none;
   font-weight: bold;
   background: antiquewhite;
   padding: 0.2rem 1rem;
   cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 3px 3px gray;
+}
+
+.delete-btn-wrapper button:active {
+  box-shadow: none;
+  margin-left: 3px;
+  margin-top: 3px;
 }

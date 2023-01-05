@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms Demo</title>
+  </head>
+  <body>
+    <h1>Forms Demo</h1>
+    <form action="/tacos">
+      <p>
+        <label for="username">Enter a Username</label>
+        <input id="username" type="text" placeholder="username" name="username" />
+      </p>
+      <p>
+        <label for="password">Enter a Password</label>
+        <input id="password" type="password" placeholder="passowrd" name="password" />
+      </p>
+      <p>
+        <label for="color">Enter a Color</label>
+        <input id="color" type="color" name="color" />
+      </p>
+      <p>
+        <label for="number">Enter a Number</label>
+        <input id="number" type="number" placeholder="enter a number" name="num" />
+      </p>
+      <button type="button">Submit</button>
+      <input type="submit" value="click Me!" />
+    </form>
+    <hr />
+    <button>Not Inside Form</button>
+    <h2>Hijacking Searches</h2>
+    <h3>Search Naver</h3>
+    <form action="https://search.naver.com/search.naver">
+      <input type="text" name="query" />
+      <button>네이버 검색하기</button>
+    </form>
+    <h3>Search Google</h3>
+    <form action="https://www.google.co.kr/search">
+      <input type="text" name="q" />
+      <button>구글검색</button>
+    </form>
+    <h3>Search Youtube</h3>
+    <form action="https://www.youtube.com/results">
+      <input type="text" name="search_query" />
+      <button>유튜브검색</button>
+    </form>
+  </body>
+</html>

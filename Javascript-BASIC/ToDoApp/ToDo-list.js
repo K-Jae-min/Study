@@ -1,4 +1,3 @@
-// 전역변수
 const todoInput = document.querySelector("#todo-input");
 const todoList = document.querySelector("#todo-list");
 
@@ -65,14 +64,6 @@ const saveItmesFn = function () {
   saveItmes.length === 0 ? localStorage.removeItem("saved-items") : localStorage.setItem("saved-items", JSON.stringify(saveItmes));
 };
 
-// 위코드와 같음(삼항연산자 = (조건) ? (true일 경우 실행) :(false일 경우 실행) )
-//   if (saveItmes.length === 0) {
-//     localStorage.removeItem("saved-items");
-//   } else {
-//     localStorage.setItem("saved-items", JSON.stringify(saveItmes));
-//   }
-// };
-
 if (savedTodoList) {
   for (let i = 0; i < savedTodoList.length; i++) {
     createTodo(savedTodoList[i]);
@@ -111,7 +102,6 @@ const weatherSearch = function ({ latitude, longitude }) {
 
 const accessToGeo = function ({ coords }) {
   const { latitude, longitude } = coords;
-  // shorthan property
   const positionObj = {
     latitude,
     longitude,
@@ -129,16 +119,3 @@ aksForLocation();
 if (savedWeatherData) {
   weatherDataActive(savedWeatherData);
 }
-
-// const promiseTest = function () {
-//   return new Promise((resolver, reject) => {
-//     setTimeout(() => {
-//       resolver("succes");
-//       // reject("error");
-//     }, 2000);
-//   });
-// };
-
-// promiseTest().then((res) => {
-//   console.log(res);
-// });
